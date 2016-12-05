@@ -1,0 +1,81 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+<dom-module id="simple-card">
+  <template>
+    <style>
+      .card {
+				background-color: #fff;
+				margin-bottom: 1.6rem;
+      }
+      .padding {
+				padding: 1.6rem;
+      }
+      .image {
+				min-height: 100px;
+				background-color: #eee;
+      }
+      .image img {
+				width: 100%;
+				max-width: 100%;
+				display: block;
+      }
+      .relative {
+     	 position: relative;
+      }
+      .border-tlr-radius {
+				border-top-left-radius: 2px;
+				border-top-right-radius: 2px;
+      }
+      .text-center {
+  	    text-align: center;
+      }
+      .shadow {
+      	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      }
+      .card {
+    	  font-family: 'Ubuntu', sans-serif;
+      }
+      article {
+     	 font-size: 15px;
+      }
+      card-title {
+				font-size: 41px;
+				background: #fff;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				padding: 3px 30px 3px 30px;
+				background-color: #fff;
+      }
+    </style>
+
+    <div class="card shadow">
+      <div class="image border-tlr-radius relative">
+        <img src="{{imgSrc}}" alt="image" alt="{{title}}" class="border-tlr-radius">
+        <card-title class="shadow">{{title}}</card-title>
+      </div>
+      <div class="relative padding">
+        <article aria-label="{{title}}">
+          <content></content>
+        </article>
+      </div>
+    </div>
+  </template>
+  
+	<script>
+    Polymer({
+      is: 'simple-card',
+      properties: {
+        title: {
+          type: String,
+          value: 'Title'
+        },
+        imgSrc: {
+          type: String,
+          value: '#'
+        }
+      }
+    })
+  </script>
+
+</dom-module>

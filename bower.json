@@ -1,0 +1,24 @@
+{
+  "name": "simple-card",
+  "authors": [
+    "dstepbw <dstepbw@gmail.com>"
+  ],
+  "description": "Simple card component with polymer",
+  "main": "simple-card",
+  "keywords": [
+    "card"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "^1.7.0"
+  }
+}
